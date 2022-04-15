@@ -74,7 +74,6 @@ num1 - num2
 num1 * num2
 num1 // num2
 
-
 # ExtraTask:
 def palindrome():
     x = int(input('Задайте число x = '))
