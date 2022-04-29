@@ -1,22 +1,19 @@
-ExtraTask:
-
-Вам дана m x nцелочисленная сетка , accountsгде accounts[i][j] сумма денег у клиента в банке. Верните богатство , которое есть у самого богатого клиента.i           th    j           th
-
-Богатство клиента — это сумма денег, которую он имеет на всех своих банковских счетах. Самый богатый клиент — это клиент, который имеет максимальное богатство.
-
-Пример № 1:
-Input: account = [[1,2,3],[3,2,1]]
-Output: 6
-Объяснение: оба клиента считатся богатыми ведь их богатсво равны)
-
-Пример № 2:
-Input: account = [[1,5],[7,3],[3,5]]
-Output: 10
-Объяснение: 2 клиент самый богатый ведь 7 + 3 = 10
-
-Шаблон для решения:
+# ExtraTask:
 
 class Solution:
 
-    def maximum_wealth(self, account: list) -> int:
-        решение здесь….
+    def maximum_wealth(self, account):
+        self.account = account
+        for i in account:
+            money = 0
+            richest = 0
+            for j in i:
+                money += j
+            if richest < money:
+                richest = money
+
+        print(f'Самый богатый клиент имеет ${richest}.')
+
+account = [[1, 2, 3, 4], [5, 6], [7, 8, 9]]
+a = Solution()
+a.maximum_wealth(account)
